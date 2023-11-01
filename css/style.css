@@ -1,0 +1,140 @@
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body, h1, h2, h3, h4, p, figure, blockquote, dl, dd, ul {
+  margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+  }
+  /* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* General STYLE */
+:root {
+    --accent: hsl(158, 36%, 37%);
+    --maincolor: hsl(228, 12%, 48%);
+    --serif: 'Fraunces', serif;
+    --sansserif: 'Montserrat', sans-serif;
+}
+body {
+    padding:0em;
+    text-rendering: optimizeSpeed;
+    text-align:left; 
+    background:hsl(30, 38%, 92%);
+    /* to stick the footer to the bottom */
+    min-height: 100vh; 
+    display:flex; flex-direction:column; 
+}
+h1, h2, h3, ul {
+    padding:0;
+}
+h1 {
+    font-size:2rem;
+    line-height:2.1rem;
+    font-family: var(--serif);
+    font-weight:700;
+    color:hsl(212, 21%, 14%);
+    padding:1rem 0;
+}
+h2 {
+  font-family: var(--sansserif);
+  text-transform: uppercase;
+  font-size:0.8rem;
+  line-height:1.5rem;
+  font-weight:500;
+  letter-spacing:0.25rem;
+}
+p {
+    font-size:0.875rem;
+    line-height:1.5rem;
+    font-family: var(--sansserif);
+    font-weight:500;
+    color:hsl(228, 12%, 48%);
+    padding:0;
+}
+main {
+    background:white;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 1.25rem 2.5rem #efeae6;
+    overflow:hidden;
+    display:grid;
+    gap: 0rem;
+    max-width: 42.75rem;
+    margin:auto;
+}
+main > *, .image picture, .image img {
+  max-width:21.438rem;
+}
+.image picture, .image img {
+  height:auto;
+  vertical-align: top; /*removes white space below the picture */
+}
+.description {
+  padding:1.563rem;
+}
+.price {
+  margin-top:1.2rem;
+}
+.price > * {
+  display: inline-block;
+  vertical-align:middle;
+  padding:0.65rem 0;
+}
+.price h3 {
+  color:var(--accent);
+  font-family: var(--serif);
+  font-size:2.1rem;
+  padding:0;
+}
+h2, .price p {
+  color: var(--maincolor); 
+}
+.price p {
+  margin: 0 0 0 1.1rem;
+  padding:0;
+  text-decoration:line-through;
+}
+button.addtocart {
+  display:block;
+  width:100%;
+  background:var(--accent);
+  font-family: var(--sansserif);
+  font-size:0.875rem;
+  line-height:1.5rem;
+  font-weight:500;
+  letter-spacing:0.01rem;
+  color: white;
+  border-radius: 0.5rem;
+  padding:0.8rem ;
+  margin:1.4rem 0 0 0;
+  border: none;
+	cursor: pointer;
+	outline: none;
+}
+button.addtocart::before {
+  content: url(../images/icon-cart.svg);
+  margin-right:0.6rem;
+}
+button.addtocart:hover {
+  background:#174131;
+}
+@media screen and (min-width:40rem) {
+  main {
+    grid-template-columns: 1fr 1fr; 
+  }
+  main > *, .image picture, .image img {
+    max-width:18.75rem;
+  }
+  .description {
+    padding:2rem;
+  }
+}
