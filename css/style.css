@@ -104,7 +104,6 @@ h2, .price p {
   text-decoration:line-through;
 }
 button.addtocart {
-  display:block;
   width:100%;
   background:var(--accent);
   font-family: var(--sansserif);
@@ -119,10 +118,15 @@ button.addtocart {
   border: none;
 	cursor: pointer;
 	outline: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
 }
 button.addtocart::before {
   content: url(../images/icon-cart.svg);
-  margin-right:0.6rem;
+  display:inline-block;
+  height: 16px;
 }
 button.addtocart:hover {
   background:#174131;
@@ -138,3 +142,5 @@ button.addtocart:hover {
     padding:2rem;
   }
 }
+footer { font-size: 11px; text-align: center; }
+footer a { color: hsl(228, 45%, 44%); }
